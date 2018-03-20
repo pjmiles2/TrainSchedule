@@ -1,6 +1,50 @@
 body {
 
-background-image: url("../images/metra-train.jpg");
+background-image: url("../images/train.jpg");
+
+}
+
+#trains {
+
+background-color:rgba(27, 24, 24, 0.5);
+
+}
+
+tr {
+
+    color: white;
+    font-family: 'Raleway', sans-serif;
 
 
+}
+
+
+
+.jumbotron {
+
+    background-color:rgba(27, 24, 24, 0.5);
+
+    font-family: 'Faster One', cursive;
+    color: whitesmoke;
+
+}
+
+.panel-title {
+
+    font-family: 'Faster One', cursive;
+    size: 20pt;
+
+
+}
+
+.panel-body {
+
+    font-family: 'Raleway', sans-serif;
+
+}
+
+.btn {
+
+background-color: gray;
+color: white
 }
