@@ -56,13 +56,13 @@ console.log(time);
 console.log(frequency);
 
 var tFrequency = frequency;
-var firstTime = newTime;
+var firstTime = time;
 
-var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
+var firstTimeConverted = moment(firstTime, "LT").subtract(1, "years");
 console.log(firstTimeConverted);
 
 var currentTime = moment();
-console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
+console.log("CURRENT TIME: " + moment(currentTime).format("LT"));
 
 var diffTime = moment().diff(moment(firstTimeConverted), "minutes");
 console.log("DIFFERENCE IN TIME: " + diffTime);
@@ -74,9 +74,9 @@ var tMinutesTillTrain = tFrequency - tRemainder;
 console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
 
 var nextTrain = moment().add(tMinutesTillTrain, "minutes");
-console.log("ARRIVAL TIME: " + moment(nextTrain).format("hh:mm"))
+console.log("ARRIVAL TIME: " + moment(nextTrain).format("LT"))
 
 $("#trains > tbody").append("<tr><td>" + newName + "</td><td>" + newDest + "</td><td>" +
-frequency + "</td><td>" + moment(nextTrain).format("hh:mm") + "</td><td>" + tMinutesTillTrain + "</td><td>");
+frequency + "</td><td>" + moment(nextTrain).format("LT") + "</td><td>" + tMinutesTillTrain + "</td><td>");
 
 });
