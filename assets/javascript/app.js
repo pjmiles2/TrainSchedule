@@ -1,4 +1,5 @@
   // Initialize Firebase
+  
   var config = {
     apiKey: "AIzaSyBeaq33RTM-DtBo0o5nRAMK2al1xwWvPBU",
     authDomain: "train-schedule-f0a8c.firebaseapp.com",
@@ -8,6 +9,7 @@
     messagingSenderId: "1040567222203"
   };
   firebase.initializeApp(config);
+
 
 
   var database = firebase.database();
@@ -35,6 +37,9 @@
     frequency : frequency,
 
   };
+
+  database.ref().push(newTrain);
+
 
   var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
   console.log(firstTimeConverted);
