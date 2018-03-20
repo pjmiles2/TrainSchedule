@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="assets/javascript/app.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <script src="https://www.gstatic.com/firebasejs/4.11.0/firebase.js"></script>
+
+</head>
+<body>
+   
+    <div class="container">
+
+        <br>
+        <div class="jumbotron">
+        <h1 class="text-center">Trains</h1>
+        </div>
+    
+
+       <div class="row">
+           <div class="col-lg-12">
+        <table class="table">
+            <thead class="thead-light">
+            <tr>
+                <th scope="col">Train Name</th>
+                <th scope="col">Destination</th>
+                <th scope="col">Frequency (min)</th>
+                <th scope="col">Next Arrival</th>
+                <th scope="col">Minutes Away</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <th scope="row">Mark Otto</th>
+                <td>Dude</td>
+                <td>10/10/1989</td>
+                <td>252</td>
+                <td>5000</td>
+            </tr>
+            </tbody>
+        </table>
+        </div>
+        </div>
+
+        <div class="row">
+    
+          <div class="col-lg-12">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <h3 class="panel-title">Add Train</h3>
+              </div>
+              <div class="panel-body">
+    
+                <form role="form">
+                  <div class="form-group">
+                    <label for="name-input">Train Name:</label>
+                    <input class="form-control" id="name-input" type="text">
+                  </div>
+                  <div class="form-group">
+                    <label for="destination-input">Destination:</label>
+                    <input class="form-control" id="destination-input" type="text">
+                  </div>
+                  <div class="form-group">
+                    <label for="time-input">First Train Time:</label>
+                    <input class="form-control" id="time-input" type="time">
+                  </div>
+                  <div class="form-group">
+                    <label for="frequency-input">Frequency (min):</label>
+                    <input class="form-control" id="frequency-input" type="number">
+                  </div>
+                  <button class="btn btn-default" id="add-train" type="submit">Submit</button>
+                </form>
+              </div>
+            </div>
+          </div>
+    
+    
+        </div>
+    
+      </div>
+    
+      <!-- jQuery -->
+      <script src="https://code.jquery.com/jquery.js"></script>
+    
+
+
+
+
+
+
+
+</body>
+</html>
