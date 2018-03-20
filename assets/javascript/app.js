@@ -1,33 +1,24 @@
   // Initialize Firebase
-  
   var config = {
-    apiKey: "AIzaSyBeaq33RTM-DtBo0o5nRAMK2al1xwWvPBU",
-    authDomain: "train-schedule-f0a8c.firebaseapp.com",
-    databaseURL: "https://train-schedule-f0a8c.firebaseio.com",
-    projectId: "train-schedule-f0a8c",
-    storageBucket: "train-schedule-f0a8c.appspot.com",
-    messagingSenderId: "1040567222203"
+    apiKey: "AIzaSyAkpeBPqjL2PbJqviH9qI2CImJJXwdwO4c",
+    authDomain: "train-scheduler-bb939.firebaseapp.com",
+    databaseURL: "https://train-scheduler-bb939.firebaseio.com",
+    projectId: "train-scheduler-bb939",
+    storageBucket: "train-scheduler-bb939.appspot.com",
+    messagingSenderId: "858772338657"
   };
-  firebase.initializeApp(config);
-
-
+  firebase.initializeApp(config);  
+ 
 
   var database = firebase.database();
 
 
   $("#add-train").on("click", function(event) {
 
-    var name = $("#name-input").val().trim();
-    console.log(name);
-    var destination = $("#destination-input").val().trim();
-    console.log(destination);
-    var time = $("#time-input").val().trim();
-    console.log(time);
-    var frequency = $("#frequency-input").val().trim();
-    console.log(frequency);
-
-  });
-
+    $("#name-input").val().trim();
+    $("#destination-input").val().trim();
+    $("#time-input").val().trim();
+    $("#frequency-input").val().trim();
 
   var newTrain = {
 
@@ -35,25 +26,22 @@
     destination : destination,
     time : time,
     frequency : frequency,
+    dateAdded: firebase.database.ServerValue.TIMESTAMP
 
   };
 
   database.ref().push(newTrain);
+  
+  console.log(newTrain.name);
 
 
-  var firstTimeConverted = moment(firstTime, "HH:mm").subtract(1, "years");
-  console.log(firstTimeConverted);
+  $("#name-input").val("");
+  $("#destination-input").val("");
+  $("#time-input").val("");
+  $("#frequency-input").val("");
 
-
-  var currentTime = moment();
-  console.log("CURRENT TIME: " + moment(currentTime).format("hh:mm"));
-
-
-
-  database.ref().on("child_added", function(childSnapshot, prevChildKey) {
-
-    console.log(childSnapshot.val());
+});
 
 
 
-  });
+
