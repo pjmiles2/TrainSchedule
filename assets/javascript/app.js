@@ -76,7 +76,7 @@ console.log("MINUTES TILL TRAIN: " + tMinutesTillTrain);
 var nextTrain = moment().add(tMinutesTillTrain, "minutes");
 console.log("ARRIVAL TIME: " + moment(nextTrain).format("LT"))
 
-$("#trains > tbody").append("<tr><td>" + newName + "</td><td>" + newDest + "</td><td>" +
+$("#trains > tbody").prepend("<tr><td>" + newName + "</td><td>" + newDest + "</td><td>" +
 frequency + "</td><td>" + moment(nextTrain).format("LT") + "</td><td>" + tMinutesTillTrain + "</td><td>");
 
 });
